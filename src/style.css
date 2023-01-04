@@ -1,0 +1,39 @@
+.board {
+  display: flex;
+  flex: 1
+
+}
+.column{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.column__title {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.column__paragraph {
+  font-size: 0.8em;
+}
+
+.column__list {
+  list-style: none;
+  align-self: stretch;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.task{
+  font-size: 12px;
+  width: 80%;
+  margin: 0 auto;
+  
+}

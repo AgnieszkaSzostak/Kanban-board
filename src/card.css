@@ -1,0 +1,84 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60%;
+  height: auto;
+  padding: 10% 0;
+  margin: 10px auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffcc;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card__user {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.card__button {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  line-height: 30px;
+}
+.card__button:after{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 20px;
+}
+.card__button--right,
+.card__button--left{
+  background-color: #4caf50;
+}
+.card__button--right:after {
+  content: '\2192';
+}
+
+.card__button--delete {
+  background-color: red;
+}
+.card__button--delete:after {
+  content: 'X';
+}
+.card__button--left:after {
+  content: '\2190';
+}
+.card__button--right:hover,
+.card__button--left:hover {
+  background-color: #45a049;
+}
+.card__button--left:hover {
+  background-color: #45a049;
+}
