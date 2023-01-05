@@ -1,6 +1,6 @@
 const validateForm = (e, form) => {
     e.preventDefault();
-    const {taskName, projectStage, user} = form.elements;
+
     let errors = null;
     const fields = [
         {
@@ -38,14 +38,6 @@ const validateForm = (e, form) => {
             }
         }
     })
-    const formObj = {
-        task: {
-            name: taskName.value,
-            idColumn: projectStage.value,
-            user: user.value,
-        },
-        errors
-    } 
-    return formObj
+    return errors
 }
 export default validateForm
