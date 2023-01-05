@@ -19,10 +19,9 @@ function Form (){
     const selectOptions = colState.map(col => <option key={col.id} value={col.id} disabled={isColumnFull(col.limit, col.id)}>{col.name}</option>)
     const formRef = React.createRef();
     const [form, setForm] = useState(null);
-    const [errors, setErrors] = useState(null);
+    const [errors, setErrors] = useState(0);
     useEffect(() => {
         if(errors === null){
-            console.log(formRef.current.elements);
             const {taskName, projectStage, user} = formRef.current.elements
             setForm({
                 name: taskName.value,
@@ -30,7 +29,8 @@ function Form (){
                 idColumn: Number(projectStage.value)
             })
         }
-    },[errors])
+    },[errors]);
+
     useEffect(() => {
         if(form !== null){
             taskDispatch({
