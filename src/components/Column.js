@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
 /* eslint-disable react/prop-types */
@@ -16,8 +17,15 @@ function Column(props) {
         }
         return null
     })
+    function calculateLimit(){
+        const tasks = columnTasks.filter(element => element !== null)
+        if(tasks.length === limit){
+            return "column column--full"
+        }
+        return "column"
+    }
     return (
-        <div id={id} className="column">
+        <div id={id} className={calculateLimit()}>
             <h1 className="column__title">{name}</h1>
             <p className="column__limit">{limit}</p>
             <ul className="column__list">
